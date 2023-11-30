@@ -5,10 +5,10 @@ import plotly.express as px
 from Generator import train_GAN_test
 
 def main():
-    st.title('Data Processor')
+    st.title('Cross Sectional Data Generator')
 
     uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-    target_count = st.number_input("Enter the target count of values", min_value=1, value=10, step=1)
+    target_count = st.number_input("Enter the target count of values", min_value=1, value=1000, step=10)
     randomness_degree = st.slider("Degree of randomness", min_value=0.0, max_value=1.0, value=0.5)
     epochs = st.number_input("Enter the number of training epochs", min_value=1, value=5000, step=100)
 
